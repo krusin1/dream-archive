@@ -116,7 +116,7 @@ if (d6 < 15 && index.y > middle.y  && thumb.y < index.y && thumb.y < middle.y) {
   console.log("fish!");
 }
 
-if(d5>30){
+if(d5>30 && d1>20){
   showAnimal("dog");
 }
 
