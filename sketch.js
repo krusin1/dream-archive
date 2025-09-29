@@ -81,21 +81,23 @@ function detectGesture(hand) {
 
     let d8= dist(thumb.x,thumb.y,index.x,index.y)
 
-    let d9= dist(thumb.x, thumb.y, pinky.x,pinky.y)
+    let d9= dist(thumb.x, thumb.y, knuckle.x,knuckle.y)
 
   if (d2<15 && d3<15 && d5<17 && thumb.y<pinky.y) {
     showAnimal("snake");
     console.log("snake!")
   } 
-  if (d1 < 15 && d2 < 15 && index.y < middle.y && pinky.y<ring.y) {
+  if (d1 < 15 && d2 < 15 && index.y < middle.y && d5 > 17) {
     showAnimal("deer");
   }
   if(index.y > thumb.y && d2<15 && wrist.y<index.y )
   {
     showAnimal("elephant");
   }
-  if(d1 > 20 && d2 > 20 && d3 > 20 && d4 < 45 && index.y < thumb.y && d9 < 25 && d6 > 15){
-     showAnimal("flower");
+ 
+  if (
+    d1 > 22 &&  d2 > 22 && d3 > 22 && d4 < 42 && d5 < 22 && d6 > 16 && index.y < thumb.y ) {
+    showAnimal("flower");
   }
   if (d6 < 15 && d5 < 15 && thumb.y > index.y && d7<20) {
   showAnimal("rabbit");
@@ -103,7 +105,7 @@ function detectGesture(hand) {
   if (d6 < 20 && indexpip.y < index.y && middlepip.y < middle.y && d5 < 20 && thumb.y > pinky.y  ) {
     showAnimal("cat");
  }
-  if (index.y < middle.y && middle.y < ring.y && ring.y < pinky.y && indexpip.y < middlepip.y  && 
+  if (thumb.y< index.y && index.y < middle.y && middle.y < ring.y && ring.y < pinky.y && indexpip.y < middlepip.y  && 
   d1 > 20 && d2 < 20 && d5 < 30  && knuckle.y<knuckle3.y && d8>15) 
   {
     showAnimal("horse");
@@ -116,7 +118,8 @@ if (d6 < 15 && index.y > middle.y  && thumb.y < index.y && thumb.y < middle.y) {
   console.log("fish!");
 }
 
-if(d5>30 && d1>20){
+if (
+  d5 > 20 &&  d2 < 20 &&  (d9 < 20)) {
   showAnimal("dog");
 }
 
