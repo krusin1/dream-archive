@@ -87,7 +87,7 @@ function detectGesture(hand) {
     showAnimal("snake");
     console.log("snake!")
   } 
-  if (d1 < 15 && d2 < 15 && index.y < middle.y && d5 > 17) {
+  if (d1 < 15 && d2 < 15 && index.y < middle.y ) {
     showAnimal("deer");
   }
   if(index.y > thumb.y && d2<15 && wrist.y<index.y )
